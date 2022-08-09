@@ -1,5 +1,6 @@
 # Description
  
+ 0x11. C - printf
  printf is a well known function used in C programming to do formated printing. Usually it only takes the standard library to call it into a c program, and using it for simple strings or formatted specifiers that allow us to print diferent types of data. See man of printf to understand how printf works.
  | File  | Format Specifier | Description   |
 | ------------ | ------------ | ------------ |
