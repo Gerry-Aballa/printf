@@ -1,21 +1,19 @@
 #ifndef MAIN_H
 #define MAIN_H
-
-#include <stdlib.h>
 #include <stdarg.h>
-
-int _printf(const char *format, ...);
-
+#include <stdlib.h>
+#include <unistd.h>
+#include <limits.h>
 /**
- * struct code_format - structure format
- * @sc: specifier
- * @f: function associated
+ * struct a - this structure is going to give us the format
+ * @c: the character that is going to give us the respective function
+ * @p: function pointer with va_list argument
  */
-
-typedef struct code_format
+typedef struct a
 {
-  char *sc;
-  int (*f)(va_list);
-} code_f;
+	    char c;
+	    int (*p)(va_list list, char *s, int *index);
+} choose;
+int _printf(const char *format, ...);
 
 #endif
