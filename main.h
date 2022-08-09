@@ -1,19 +1,24 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <stdarg.h>
-#include <stdlib.h>
 #include <unistd.h>
-#include <limits.h>
+#include <stdarg.h>
+#include <stdio.h>
 /**
- * struct a - this structure is going to give us the format
- * @c: the character that is going to give us the respective function
- * @p: function pointer with va_list argument
+ *struct print_a - A struct that has a pointer character and a pointer
+ *to a function
+ *@s: a character pointer
+ *@f: a function pointer
  */
-typedef struct a
+typedef struct print_a
 {
-	    char c;
-	    int (*p)(va_list list, char *s, int *index);
-} choose;
+	char s;
+	int (*f)();
+} print_a_t;
+int check_formatter(va_list args, const char *format, print_a_t print_a[]);
 int _printf(const char *format, ...);
-
+int _putchar(char c);
+int print_number(int n);
+void a_struct(void);
+int print_per(int p);
+int print_rev(va_list args);
 #endif
