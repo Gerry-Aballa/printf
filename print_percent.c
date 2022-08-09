@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_percent - print character %
+ * print_percent - print character % actually not working
  * @a: element of va_list type
  * @s: buffer
  * @index: position on buffer
